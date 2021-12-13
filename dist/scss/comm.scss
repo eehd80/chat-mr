@@ -1,0 +1,205 @@
+@charset "UTF-8";
+@import "reset", "variables", "mixin";
+
+// layout
+.wrap {
+    padding: 75px 2% 65px;
+    &.robot-none {
+        .message-balloon {
+            padding-left: 0;
+        }
+        .thumb-profile {
+            display: none;
+        }
+    }
+}
+.chat-head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #e4e4e4;
+    .chat-tit {
+        position: relative;
+        .logo {
+            font-size: 1.2em;
+        }
+        .beta {
+            @include posY;
+            right: -40px;
+            padding: 2px 5px 1px;
+            // background-color: rgba($prim1, 0.1);
+            border-radius: 3px;
+            font-size: 1.4em;
+            line-height: 2;
+            letter-spacing: 0;
+            color: $prim2;
+            font-family: "Cookie", cursive;
+        }
+    }
+    .btn-close {
+        @include posY;
+        left: 4%;
+        &::before {
+            content: "\f00d";
+            font-family: "Line Awesome Free";
+            font-weight: 900;
+            font-size: 1.6em;
+        }
+    }
+}
+
+.group-message-balloon {
+    li {
+        position: relative;
+        margin-top: 6px;
+        &.top-m {
+            margin-top: 25px;
+        }
+    }
+    .message-balloon {
+        padding-left: 35px;
+        &.message-my {
+            display: flex;
+            justify-content: flex-end;
+            .title-module {
+                background-color: rgba($prim1, 1);
+                border-radius: 20px 20px 0 20px;
+            }
+            .txt-confirm {
+                left: -60px;
+                right: auto;
+                text-align: right;
+            }
+        }
+    }
+    .select-module {
+        display: flex;
+        flex-wrap: wrap;
+        a {
+            display: block;
+            margin-right: 5px;
+            padding: 5px 15px 5px 10px;
+            border: 1px solid rgba($prim1, 0.3);
+            border-radius: 5px;
+            background-color: rgba($prim1, 0.1);
+        }
+    }
+    .thumb-profile {
+        position: absolute;
+        top: -7px;
+        left: 0;
+        overflow: hidden;
+        width: 30px;
+        height: 30px;
+        // border-radius: 50%;
+        // border: 1px solid #f3f4f5;
+        background: url(../../images/common/ico-robot.svg) 0 0 / contain no-repeat;
+        text-indent: -9999px;
+    }
+    .title-module {
+        position: relative;
+        display: inline-block;
+        max-width: 80%;
+        padding: 15px;
+        background-color: $mychat;
+        border-radius: 20px 15px 20px 0;
+        word-break: break-all;
+        .txt-confirm {
+            position: absolute;
+            bottom: 0;
+            right: -50px;
+            font-size: 11px;
+            letter-spacing: -0.05em;
+            color: #aeaeae;
+        }
+        .ico- {
+            display: inline-block;
+            width: 20px;
+            margin: -5px 0 0 3px;
+            vertical-align: middle;
+        }
+        .time- {
+            span {
+                font-family: "verdana", serif;
+                letter-spacing: -0.1em;
+            }
+        }
+    }
+}
+
+.date-check {
+    margin-bottom: 12px;
+    text-align: center;
+    .box-data {
+        display: inline-block;
+        padding: 0 12px 1px;
+        border: 1px solid #c9cfd5;
+        border-radius: 15px;
+        background: rgba($b, 0.3);
+        color: $w;
+        font-size: 0.8em;
+    }
+}
+
+.chat-write {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 0 5px;
+    border-top: 1px solid #e4e4e4;
+    background-color: #fafafa;
+    .chat-write-area {
+        display: flex;
+        align-items: center;
+        &.on {
+            .chat-input-area {
+                height: 70px;
+            }
+        }
+    }
+    .btn-photo,
+    .btn-phone,
+    .btn-submit,
+    .btn-func {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        height: 49px;
+        padding: 0 5px;
+        font-size: 1.6em;
+        color: $gray-9;
+    }
+    .chat-input-area {
+        flex: 1 0;
+        height: 50px;
+        padding: 14px 0 0;
+        .chat-input {
+            overflow-y: auto;
+            width: 100%;
+            height: 100%;
+            padding: 0 17px 0 6px;
+            font-size: 15px;
+            color: $b;
+            line-height: 1.35;
+            box-sizing: border-box;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            resize: none;
+        }
+    }
+    .input-btn-wrap {
+        display: flex;
+    }
+}
+
+@import "contents", "main";

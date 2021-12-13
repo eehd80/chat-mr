@@ -1,0 +1,543 @@
+@charset "UTF-8";
+/* reset */
+@font-face {
+  font-family: "Cafe24SsurroundAir";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SBAggroB";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+fieldset,
+img {
+  border: 0 none;
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+input,
+select,
+textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button {
+  font-size: 100%;
+  vertical-align: middle;
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+/* 뷰표트 변환시 폰트크기 자동확대 방지 */
+input[type="text"], input[type="password"], input[type="submit"], input[type="search"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+input:checked[type="checkbox"] {
+  background-color: #666;
+  -webkit-appearance: checkbox;
+}
+
+button {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="file"] {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* 기본 폰트 설정 */
+body,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+  color: #111;
+  letter-spacing: -0.05em;
+}
+
+/* color값은 디자인가이드에 맞게사용 */
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  text-decoration: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var,
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+hr {
+  display: none;
+}
+
+input[type="password"] {
+  font-family: "Malgun Gothic";
+}
+
+/* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
+/* skipnavigation */
+#u-skip a {
+  position: absolute;
+  left: -3000%;
+}
+
+#u-skip a:focus {
+  display: block;
+  left: 0;
+  top: 0;
+  z-index: 10000000000;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background: #0072bc;
+  color: #fff;
+  text-align: center;
+}
+
+/* 이미지 스프라이트 */
+.img_g {
+  display: inline-block;
+  overflow: hidden;
+  background: url(../../images/comm/img-comm.png) no-repeat;
+  vertical-align: top;
+}
+
+/* 이미지 */
+/* global */
+.ir_pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0px;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir_wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+}
+
+/* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.blind,
+caption,
+legend {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+.f_l {
+  float: left;
+}
+
+.f_r {
+  float: right;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.tbl {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.pc {
+  display: block;
+}
+
+.m {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .pc {
+    display: none;
+  }
+  .m {
+    display: block;
+  }
+}
+
+/* 테이블 초기화 */
+.clear_g {
+  display: block;
+  overflow: visible;
+  width: auto;
+  clear: both;
+  *zoom: 1;
+}
+
+.clear_g:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  content: "";
+}
+
+.wrap {
+  padding: 75px 2% 65px;
+}
+
+.wrap.robot-none .message-balloon {
+  padding-left: 0;
+}
+
+.wrap.robot-none .thumb-profile {
+  display: none;
+}
+
+.chat-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.chat-head .chat-tit {
+  position: relative;
+}
+
+.chat-head .chat-tit .logo {
+  font-size: 1.2em;
+}
+
+.chat-head .chat-tit .beta {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -40px;
+  padding: 2px 5px 1px;
+  border-radius: 3px;
+  font-size: 1.4em;
+  line-height: 2;
+  letter-spacing: 0;
+  color: #36c5c5;
+  font-family: "Cookie", cursive;
+}
+
+.chat-head .btn-close {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 4%;
+}
+
+.chat-head .btn-close::before {
+  content: "\f00d";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 1.6em;
+}
+
+.group-message-balloon li {
+  position: relative;
+  margin-top: 6px;
+}
+
+.group-message-balloon li.top-m {
+  margin-top: 25px;
+}
+
+.group-message-balloon .message-balloon {
+  padding-left: 35px;
+}
+
+.group-message-balloon .message-balloon.message-my {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.group-message-balloon .message-balloon.message-my .title-module {
+  background-color: #5bd7d7;
+  border-radius: 20px 20px 0 20px;
+}
+
+.group-message-balloon .message-balloon.message-my .txt-confirm {
+  left: -60px;
+  right: auto;
+  text-align: right;
+}
+
+.group-message-balloon .select-module {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.group-message-balloon .select-module a {
+  display: block;
+  margin-right: 5px;
+  padding: 5px 15px 5px 10px;
+  border: 1px solid rgba(91, 215, 215, 0.3);
+  border-radius: 5px;
+  background-color: rgba(91, 215, 215, 0.1);
+}
+
+.group-message-balloon .thumb-profile {
+  position: absolute;
+  top: -7px;
+  left: 0;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  background: url(../../images/common/ico-robot.svg) 0 0/contain no-repeat;
+  text-indent: -9999px;
+}
+
+.group-message-balloon .title-module {
+  position: relative;
+  display: inline-block;
+  max-width: 80%;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 20px 15px 20px 0;
+  word-break: break-all;
+}
+
+.group-message-balloon .title-module .txt-confirm {
+  position: absolute;
+  bottom: 0;
+  right: -50px;
+  font-size: 11px;
+  letter-spacing: -0.05em;
+  color: #aeaeae;
+}
+
+.group-message-balloon .title-module .ico- {
+  display: inline-block;
+  width: 20px;
+  margin: -5px 0 0 3px;
+  vertical-align: middle;
+}
+
+.group-message-balloon .title-module .time- span {
+  font-family: "verdana", serif;
+  letter-spacing: -0.1em;
+}
+
+.date-check {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.date-check .box-data {
+  display: inline-block;
+  padding: 0 12px 1px;
+  border: 1px solid #c9cfd5;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.chat-write {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0 5px;
+  border-top: 1px solid #e4e4e4;
+  background-color: #fafafa;
+}
+
+.chat-write .chat-write-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chat-write .chat-write-area.on .chat-input-area {
+  height: 70px;
+}
+
+.chat-write .btn-photo,
+.chat-write .btn-phone,
+.chat-write .btn-submit,
+.chat-write .btn-func {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  height: 49px;
+  padding: 0 5px;
+  font-size: 1.6em;
+  color: #999;
+}
+
+.chat-write .chat-input-area {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  height: 50px;
+  padding: 14px 0 0;
+}
+
+.chat-write .chat-input-area .chat-input {
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  padding: 0 17px 0 6px;
+  font-size: 15px;
+  color: #000;
+  line-height: 1.35;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.chat-write .input-btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=comm.css.map */

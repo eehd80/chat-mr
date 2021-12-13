@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>진료과 추천봇</title>
+        <meta name="title" content="진료과 추천봇" />
+        <meta name="keywords" content="진료과 추천봇" />
+        <meta name="description" content="진료과 추천봇 설명이 들어갑니다." />
+        <meta property="og:title" content="진료과 추천봇" />
+        <meta property="og:url" content="http://association.magazine.or.kr/" />
+        <meta property="og:image" content="./images/mobile.png" />
+        <meta property="og:description" content="진료과 추천봇 설명이 들어갑니다." />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cookie&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+        />
+        <link rel="stylesheet" href="./dist/css/comm.css" />
+    </head>
+    <body>
+        <div id="u-skip">
+            <a href="#gnb">주메뉴 바로가기</a>
+            <a href="#main">본문 바로가기</a>
+        </div>
+        <div class="wrap">
+            <header class="chat-head">
+                <div class="chat-tit">
+                    <h1 class="logo">진료과 추천봇</h1>
+                    <span class="beta">Beta</span>
+                </div>
+                <button class="btn-close"><span class="blind">닫기</span></button>
+            </header>
+            <section>
+                <h2 class="blind">대화 본문 영역</h2>
+                <ul class="group-message-balloon">
+                    <li class="date-check">
+                        <div class="box-data">12.12 (일)</div>
+                    </li>
+                    <li class="message-balloon">
+                        <div class="thumb-profile" aria-label="프로필 사진">봇봇</div>
+                        <div class="title-module">
+                            <p class="desc-black">
+                                안녕? 👋 <br />
+                                난 진료과 추천봇이야!
+                            </p>
+                        </div>
+                    </li>
+                    <li class="message-balloon">
+                        <div class="title-module">
+                            <p class="desc-black">
+                                나는 증상을 파악해서 적합한 진료과를 추천해 줄 수 있지. 하지만 질병을 진단해 줄 순 없어..
+                            </p>
+                            <div class="txt-confirm" aria-label="메시지 작성시간">
+                                <span class="time-"><em>오후</em> <span>12:25</span></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="message-balloon">
+                        <div class="title-module">
+                            <p class="desc-black">병원 가려고? 어느 진료과가 좋을지 내가 도와 줄게. 자, 준비됐어?</p>
+                            <div class="txt-confirm" aria-label="메시지 작성시간">
+                                <span class="time-"><em>오후</em> <span>12:25</span></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="message-balloon message-my top-m">
+                        <div class="title-module">
+                            <p>준비완료!</p>
+                            <div class="txt-confirm" aria-label="메시지 작성시간">
+                                <span class="time-"><em>오후</em> <span>1:19</span></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="message-balloon top-m">
+                        <div class="thumb-profile" aria-label="프로필 사진">
+                            <img src="./images/contents/thumb-profile.png" alt="" />
+                        </div>
+                        <div class="title-module">
+                            <p class="desc-black">
+                                먼저, 성별을 알려줘! <br />
+                                아래 버튼을 누르거나 타이핑해줘 <img src="./images/contents/ico-smile2.svg" class="ico-" alt="" />
+                            </p>
+                            <div class="txt-confirm" aria-label="메시지 작성시간">
+                                <span class="time-"><em>오후</em> <span>12:25</span></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="message-balloon message-my top-m">
+                        <div class="title-module">
+                            <p>여성</p>
+                            <div class="txt-confirm" aria-label="메시지 작성시간">
+                                <!-- <p class="read-">읽음</p> -->
+                                <span class="time-"><em>오후</em> <span>1:19</span></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="message-balloon top-m">
+                        <div class="thumb-profile" aria-label="프로필 사진">
+                            <img src="./images/contents/thumb-profile.png" alt="" />
+                        </div>
+                        <div class="title-module">
+                            <p class="desc-black">
+                                나이대는? (만 나이) <br />
+                                아래에서 고르거나 타이핑해도 돼 <img src="./images/contents/ico-smile2.svg" class="ico-" alt="" />
+                            </p>
+                            <div class="txt-confirm" aria-label="메시지 작성시간">
+                                <span class="time-"><em>오후</em> <span>12:25</span></span>
+                            </div>
+                        </div>
+                        <ul class="select-module">
+                            <li><a href="#">0~9세 (10대 미만)</a></li>
+                            <li><a href="#">10~14세</a></li>
+                            <li><a href="#">15~19세</a></li>
+                            <li><a href="#">20대</a></li>
+                            <li><a href="#">30대</a></li>
+                            <li><a href="#">40대</a></li>
+                            <li><a href="#">50대</a></li>
+                            <li><a href="#">60대</a></li>
+                            <li><a href="#">70대</a></li>
+                            <li><a href="#">80대 이상</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <div class="loading-image hide"><img src="./images/contents/loading.gif" alt="" /></div>
+            <footer class="chat-write">
+                <h3 class="blind">대화창 입력영역</h3>
+                <!-- textarea 2줄 이상일 경우 .on 추가 -->
+                <div class="chat-write-area">
+                    <h4 class="blind">메시지 입력 영역</h4>
+                    <div class="input-btn-wrap">
+                        <button class="btn-func">
+                            <i class="las la-plus-circle"></i>
+                        </button>
+                        <!-- <label id="imageUploadButton" class="btn-photo" for="imageUploader" role="button">
+                            <i class="las la-plus-circle"></i>
+                            <span class="blind">이미지 추가</span>
+                        </label>
+                        <form id="imageUploader" method="post" enctype="multipart/form-data" style="height: 0px; position: fixed">
+                            <input name="files" type="file" accept="image/*" multiple="" title="파일선택" style="visibility: hidden" />
+                        </form> -->
+                        <!-- <a href="tel:02-000-0000" class="btn-phone" type="button" aria-label="전화하기">
+                            <i class="las la-phone"></i>
+                            <span class="blind">전화하기</span>
+                        </a> -->
+                    </div>
+                    <div class="chat-input-area">
+                        <textarea title="메시지 입력창" class="chat-input" maxlength="2000" placeholder="메시지를 입력하세요."></textarea>
+                    </div>
+                    <div class="submit-btn-wrap">
+                        <button class="btn-submit" type="submit" aria-label="메시지 보내기">
+                            <i class="lab la-telegram"></i>
+                            <span class="blind">메시지 보내기</span>
+                        </button>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
