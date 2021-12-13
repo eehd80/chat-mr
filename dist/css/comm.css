@@ -294,7 +294,7 @@ legend {
 }
 
 .wrap {
-  padding: 75px 2% 65px;
+  padding: 55px 2% 65px;
 }
 
 .wrap.robot-none .message-balloon {
@@ -303,6 +303,35 @@ legend {
 
 .wrap.robot-none .thumb-profile {
   display: none;
+}
+
+.wrap.robot-none .message-my .title-module::after {
+  left: auto;
+  right: 0;
+  border-bottom: 5px solid #5bd7d7;
+  border-left: 5px solid #5bd7d7;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.wrap.robot-none .title-module {
+  position: relative;
+  border-radius: 20px 20px 20px 0;
+}
+
+.wrap.robot-none .title-module::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 5px solid #f1f1f1;
+  border-top: 5px solid transparent;
+  border-left: 5px solid #f1f1f1;
+  border-right: 5px solid transparent;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .chat-head {
@@ -430,7 +459,7 @@ legend {
   max-width: 80%;
   padding: 15px;
   background-color: #f1f1f1;
-  border-radius: 20px 15px 20px 0;
+  border-radius: 0 20px 20px;
   word-break: break-all;
 }
 
