@@ -20,13 +20,15 @@
             href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
         />
         <link rel="stylesheet" href="./dist/css/comm.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./dist/js/comm.js"></script>
     </head>
     <body>
         <div id="u-skip">
             <a href="#gnb">주메뉴 바로가기</a>
             <a href="#main">본문 바로가기</a>
         </div>
-        <div class="wrap robot-none">
+        <div class="wrap">
             <header class="chat-head">
                 <div class="chat-tit">
                     <h1 class="logo">진료과 추천봇</h1>
@@ -36,95 +38,54 @@
             </header>
             <section>
                 <h2 class="blind">대화 본문 영역</h2>
-                <ul class="group-message-balloon">
+                <ul class="group-msg-balloon">
                     <li class="date-check">
                         <div class="box-data">12.12 (일)</div>
                     </li>
-                    <li class="message-balloon">
-                        <div class="thumb-profile" aria-label="프로필 사진">봇봇</div>
-                        <div class="title-module">
+                    <li class="msg-ballon">
+                        <div class="txt-module">
                             <p class="desc-black">
                                 안녕? 👋 <br />
                                 난 진료과 추천봇이야!
                             </p>
                         </div>
-                    </li>
-                    <li class="message-balloon">
-                        <div class="title-module">
+                        <div class="txt-module">
                             <p class="desc-black">
                                 나는 증상을 파악해서 적합한 진료과를 추천해 줄 수 있지. 하지만 질병을 진단해 줄 순 없어..
                             </p>
-                            <div class="txt-confirm" aria-label="메시지 작성시간">
-                                <span class="time-"><em>오후</em> <span>12:25</span></span>
-                            </div>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:25</span></div>
                         </div>
                     </li>
-                    <li class="message-balloon">
-                        <div class="title-module">
+                    <li class="msg-ballon">
+                        <div class="txt-module">
                             <p class="desc-black">병원 가려고? 어느 진료과가 좋을지 내가 도와 줄게. 자, 준비됐어?</p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:26</span></div>
+                        </div>
+                    </li>
+                    <li class="msg-ballon message-my">
+                        <div class="txt-module">
+                            <p class="desc-black">준비완료!</p>
                             <div class="txt-confirm" aria-label="메시지 작성시간">
-                                <span class="time-"><em>오후</em> <span>12:25</span></span>
+                                <span class="time-"><em>오후</em> <span>12:28</span></span>
                             </div>
                         </div>
                     </li>
-                    <li class="message-balloon message-my top-m">
-                        <div class="title-module">
-                            <p>준비완료!</p>
-                            <div class="txt-confirm" aria-label="메시지 작성시간">
-                                <span class="time-"><em>오후</em> <span>1:19</span></span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="message-balloon top-m">
-                        <div class="thumb-profile" aria-label="프로필 사진">
-                            <img src="./images/contents/thumb-profile.png" alt="" />
-                        </div>
-                        <div class="title-module">
+                    <li class="msg-ballon">
+                        <div class="txt-module">
                             <p class="desc-black">
                                 먼저, 성별을 알려줘! <br />
-                                아래 버튼을 누르거나 타이핑해줘 <img src="./images/contents/ico-smile2.svg" class="ico-" alt="" />
+                                아래 버튼을 누르거나 타이핑해줘 <span class="ico- ico-smile">스마일</span>
                             </p>
-                            <div class="txt-confirm" aria-label="메시지 작성시간">
-                                <span class="time-"><em>오후</em> <span>12:25</span></span>
-                            </div>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:30</span></div>
                         </div>
                     </li>
-                    <li class="message-balloon message-my top-m">
-                        <div class="title-module">
-                            <p>여성</p>
-                            <div class="txt-confirm" aria-label="메시지 작성시간">
-                                <!-- <p class="read-">읽음</p> -->
-                                <span class="time-"><em>오후</em> <span>1:19</span></span>
-                            </div>
+                    <li class="msg-ballon message-my">
+                        <div class="txt-module">
+                            <p class="desc-black">여성</p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:32</span></div>
                         </div>
                     </li>
-                    <li class="message-balloon top-m">
-                        <div class="thumb-profile" aria-label="프로필 사진">
-                            <img src="./images/contents/thumb-profile.png" alt="" />
-                        </div>
-                        <div class="title-module">
-                            <p class="desc-black">
-                                나이대는? (만 나이) <br />
-                                아래에서 고르거나 타이핑해도 돼 <img src="./images/contents/ico-smile2.svg" class="ico-" alt="" />
-                            </p>
-                            <div class="txt-confirm" aria-label="메시지 작성시간">
-                                <span class="time-"><em>오후</em> <span>12:25</span></span>
-                            </div>
-                        </div>
-                        <ul class="select-module">
-                            <li><a href="#">0~9세 (10대 미만)</a></li>
-                            <li><a href="#">10~14세</a></li>
-                            <li><a href="#">15~19세</a></li>
-                            <li><a href="#">20대</a></li>
-                            <li><a href="#">30대</a></li>
-                            <li><a href="#">40대</a></li>
-                            <li><a href="#">50대</a></li>
-                            <li><a href="#">60대</a></li>
-                            <li><a href="#">70대</a></li>
-                            <li><a href="#">80대 이상</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                    
             </section>
             <div class="loading-image hide"><img src="./images/contents/loading.gif" alt="" /></div>
             <footer class="chat-write">
@@ -160,5 +121,17 @@
                 </div>
             </footer>
         </div>
+
+        <div class="layer-wrap">
+            <div class="layer-">
+                <h2 class="blind">리뷰</h2>
+                <div class="rating-area">
+                    <div class="rating-txt">
+                        잠깐만요! <br />
+                        종료하기 전에 <b>소중한 의견</b>을 들려주세요~</div>
+                    </div>
+                    <div class="rating rating-0"><em class="blind">평점 5</em></div>
+                </div>
+            </div>
     </body>
 </html>

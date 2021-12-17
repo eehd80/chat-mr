@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>진료과 추천봇</title>
+        <meta name="title" content="진료과 추천봇" />
+        <meta name="keywords" content="진료과 추천봇" />
+        <meta name="description" content="진료과 추천봇 설명이 들어갑니다." />
+        <meta property="og:title" content="진료과 추천봇" />
+        <meta property="og:url" content="http://association.magazine.or.kr/" />
+        <!-- <meta property="og:image" content="./images/mobile.png" /> -->
+        <meta property="og:description" content="진료과 추천봇 설명이 들어갑니다." />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cookie&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+        />
+        <link rel="stylesheet" href="./dist/css/comm.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./dist/js/comm.js"></script>
+    </head>
+    <body>
+        <div id="u-skip">
+            <a href="#gnb">주메뉴 바로가기</a>
+            <a href="#main">본문 바로가기</a>
+        </div>
+        <div class="wrap">
+            <header class="chat-head">
+                <div class="chat-tit">
+                    <h1 class="logo">진료과 추천봇</h1>
+                    <span class="beta">Beta</span>
+                </div>
+                <button class="btn-close"><span class="blind">닫기</span></button>
+            </header>
+            <section>
+                <h2 class="blind">대화 본문 영역</h2>
+                <ul class="group-msg-balloon">
+                    <li class="date-check">
+                        <div class="box-data">12.12 (일)</div>
+                    </li>
+                    <li class="msg-ballon">
+                        <div class="txt-module">
+                            <p class="desc-black">
+                                안녕? 👋 <br />
+                                난 진료과 추천봇이야!
+                            </p>
+                        </div>
+                        <div class="txt-module">
+                            <p class="desc-black">
+                                나는 증상을 파악해서 적합한 진료과를 추천해 줄 수 있지. 하지만 질병을 진단해 줄 순 없어..
+                            </p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:25</span></div>
+                        </div>
+                    </li>
+                    <li class="msg-ballon">
+                        <div class="txt-module">
+                            <p class="desc-black">병원 가려고? 어느 진료과가 좋을지 내가 도와 줄게. 자, 준비됐어?</p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:26</span></div>
+                        </div>
+                    </li>
+                    <li class="msg-ballon message-my">
+                        <div class="txt-module">
+                            <p class="desc-black">준비완료!</p>
+                            <div class="txt-confirm" aria-label="메시지 작성시간">
+                                <span class="time-"><em>오후</em> <span>12:28</span></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="msg-ballon">
+                        <div class="txt-module">
+                            <p class="desc-black">
+                                먼저, 성별을 알려줘! <br />
+                                아래 버튼을 누르거나 타이핑해줘 <span class="ico- ico-smile">스마일</span>
+                            </p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:30</span></div>
+                        </div>
+                    </li>
+                    <li class="msg-ballon message-my">
+                        <div class="txt-module">
+                            <p class="desc-black">여성</p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:32</span></div>
+                        </div>
+                    </li>
+                    <li class="msg-ballon">
+                        <div class="txt-module">
+                            <p class="desc-black">
+                                나이대는? (만 나이) <br />
+                                아래에서 고르거나 타이핑해도 돼 <span class="ico- ico-smile">스마일</span>
+                            </p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:33</span></div>
+                        </div>
+                        <form action="">
+                            <ul class="select-module">
+                                <li><input type="radio" id="age1" name="age"><label for="age1">0~9세 (10대 미만)</label></li>
+                                <li><input type="radio" id="age2" name="age"><label for="age2">10~14세</label></li>
+                                <li><input type="radio" id="age3" name="age"><label for="age3">15~19세</label></li>
+                                <li><input type="radio" id="age4" name="age"><label for="age4">20대</label></li>
+                                <li><input type="radio" id="age5" name="age"><label for="age5">30대</label></li>
+                                <li><input type="radio" id="age6" name="age"><label for="age6">40대</label></li>
+                                <li><input type="radio" id="age7" name="age"><label for="age7">50대</label></li>
+                                <li><input type="radio" id="age8" name="age"><label for="age8">60대</label></li>
+                                <li><input type="radio" id="age9" name="age"><label for="age9">70대</label></li>
+                                <li><input type="radio" id="age10" name="age"><label for="age10">80대 이상</label></li>
+                            </ul>
+                        </form>
+                    </li>
+                    <li class="date-check">
+                        <div class="box-data">12.14 (화)</div>
+                    </li>
+                    <li class="msg-ballon">
+                        <div class="txt-module">
+                            <p class="desc-black">확인해줘서 고마워.</p>
+                        </div>
+                        <div class="txt-module">
+                            <p class="desc-black">그럼 난, 이 진료과를 추천할게! <span class="ico- ico-recom">스마일</span></p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:35</span></div>
+                        </div>
+                    </li>
+                    <li class="msg-ballon">
+                        <div class="recom-module">
+                            <p class="txt-before">
+                                추천된 진료과는 의료 빅데이터를 활용하여 자체 개발한 인공지능으로 유사한 진료과를 분석한 결과입니다. 해당
+                                결과가 정확하지 않을 수 있고, 의료용 진료 또는 진단 목적으로 제공하는 정보가 아닙니다. 반드시 의료기관에
+                                방문하여 의사와 상담하시길 바랍니다.
+                            </p>
+                            <div class="explan-module">
+                                <h3 class="blind">진료과 추천</h3>
+                                <ul class="explan-lst">
+                                    <li>
+                                        <strong>응급실</strong>
+                                        <p>
+                                            응급의료법에서 인정하는
+                                            <a href="#" class="link-blue-s"><i class="las la-link"></i>응급증상 또는 이에 준하는 증상</a> 이
+                                            아닌 상태로 응급실에 방문할 경우, 본인이 응급의료관리료를 전액 부담해야 할 수 있습니다.
+                                        </p>
+                                        <a href="#" class="link-m">내 주변 응급실</a>
+                                    </li>
+                                    <li class="et">
+                                        <strong>COVID-19 의심</strong>
+                                        <p>
+                                            <span class="ico- ico-fever">발열</span>
+                                            😷 발열과 함께 호흡기 증상(기침, 콧물, 가래 등)이 있을 경우 우선 코로나 감염을 확인 및 배제하는
+                                            것이 필요합니다. 관할보건소나 콜센터 (1339 또는 지역번호+120)에 문의하거나 선별진료소를 방문하여
+                                            검사받으시길 권유드립니다.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <strong>안과</strong>
+                                        <p>
+                                            link-blue-s 눈에 관련된 질환을 진단하고 치료하는 진료과 입니다. 주로 진료하는 질병으로는 눈
+                                            다래끼, 시력교정, 녹내장, 백내장 등이 있습니다. 그 외에도 블라블라블라 진료과 설명이 최대 150자
+                                            들어 갑니다. 줄바꿈 및 띄어쓰기 포함 최대 150자입니다. 생각보다 깁니다.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <strong>내과</strong>
+                                        <p>
+                                            눈에 관련된 질환을 진단하고 치료하는 진료과 입니다. 주로 진료하는 질병으로는 눈 다래끼,
+                                            시력교정, 녹내장, 백내장 등이 있습니다. 그 외에도 블라블라블라 진료과 설명이 최대 150자 들어
+                                            갑니다. 줄바꿈 및 띄어쓰기 포함 최대 150자입니다. 생각보다 깁니다.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <strong>치과</strong>
+                                        <p>
+                                            눈에 관련된 질환을 진단하고 치료하는 진료과 입니다. 주로 진료하는 질병으로는 눈 다래끼,
+                                            시력교정, 녹내장, 백내장 등이 있습니다. 그 외에도 블라블라블라 진료과 설명이 최대 150자 들어
+                                            갑니다. 줄바꿈 및 띄어쓰기 포함 최대 150자입니다. 생각보다 깁니다.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="txt-after">
+                                #XXX내과#, #XX내과# 가 추천된 경우, 가까운 내과 혹은 종합병원의 해당 내과를 방문하여 진료를 받으시길
+                                바랍니다.
+                            </p>
+                        </div>
+
+                        <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:35</span></div>
+                    </li>
+                    <li class="msg-ballon">
+                        <div class="txt-module">
+                            <p class="desc-black">
+                                그내가 해줄 수 있는 일은 여기까지야! 도움이 되었기를 바랄게.
+                                <span class="ico- ico-recom">스마일</span> 진료과 추천 받아보니 어때?
+                            </p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:35</span></div>
+                        </div>
+                        <form action="">
+                        <ul class="select-module opt-columns">
+                            <li>
+                                <input type="radio" name="rating" id="rating5">
+                                <label for="rating5"><div class="rating rating-5"><em class="blind">평점 5</em></div>매우 만족해요 최고!</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="rating" id="rating4">
+                                <label for="rating4"><div class="rating rating-4"><em class="blind">평점 4</em></div>만족해요!</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="rating" id="rating3">
+                                <label for="rating3"><div class="rating rating-3"><em class="blind">평점 3</em></div>보통이에요~</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="rating" id="rating2">
+                                <label for="rating2"><div class="rating rating-2"><em class="blind">평점 2</em></div>불만있어요.</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="rating" id="rating1">
+                                <label for="rating1"><div class="rating rating-1"><em class="blind">평점 1</em></div>너무 별로에요 최악!</label>
+                            </li>
+                        </ul>
+                    </form>
+                    </li>
+                    <li class="msg-ballon message-my">
+                        <div class="txt-module">
+                            <p class="desc-black">매우 만족해요. 최고!</p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:37</span></div>
+                        </div>
+                    </li>
+                    <li class="msg-ballon">
+                        <div class="txt-module">
+                            <p class="desc-black">어떤 점이 만족스러웠어?</p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:35</span></div>
+                        </div>
+                        <div class="wrap-select-check ">
+                            <form action="">
+                                <ul class="select-module opt-columns opt-check">
+                                    <li>
+                                            <input type="checkbox" id="satisfy1" name="satisfy1" value="Bike" />
+                                            <label for="satisfy1">제가 입력한 증상을 정확히 인식했어요.</label>
+                                    </li>
+                                    <li>
+                                            <input type="checkbox" id="satisfy2" name="satisfy2" value="Bike" />
+                                            <label for="satisfy2">신속하게 원하는 정보를 얻었어요.</label>
+                                    </li>
+                                    <li>
+                                            <input type="checkbox" id="satisfy3" name="satisfy3" value="Bike" />
+                                            <label for="satisfy3">내 주변 응급실 위치정보가 도움이 되었어요.</label>
+                                    </li>
+                                    <li>
+                                            <input type="checkbox" id="satisfy4" name="satisfy4" value="Bike" />
+                                            <label for="satisfy4">지금도 만족스럽지만, 음성인식 기능이 추가되었으면 좋겠어요.</label>
+                                    </li>
+                                    <li>
+                                            <input type="checkbox" id="satisfy5" name="satisfy5" value="Bike" />
+                                            <label for="satisfy5">말투가 친구같이 친근해서 좋아요.</label>
+                                    </li>
+                                    <li>
+                                            <input type="checkbox" id="satisfy6" name="satisfy6" value="Bike" />
+                                            <label for="satisfy6">내 주변 병원 정보도 함께 알려주면 좋을 것 같아요.</label>
+                                    </li>
+                                </ul>                            
+                                <input type="submit" value="선택완료" class="btn-ending">
+                            </form>
+                        </div>
+                    </li>
+                    <li class="msg-ballon message-my">
+                        <div class="txt-module">
+                            <p class="desc-black">
+                                제가 입력한 증상을 정확히 인식했어요. <br />
+                                신속하게 원하는 정보를 얻었어요.
+                            </p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:37</span></div>
+                        </div>
+                    </li>
+                    <li class="msg-ballon">
+                        <div class="txt-module">
+                            <p class="desc-black">추가 개선사항이나 문의사항이 있으면 자유롭게 남겨줘! 난 항상 귀기울여 듣고 있다구👂</p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:35</span></div>
+                        </div>
+                        <form action="">
+                            <ul class="select-module opt-columns">
+                                <li>
+                                    <input type="radio" name="inquiry" id="inquiry1">
+                                    <label for="inquiry1"><i class="las la-times-circle"></i> 없어요.</label>
+                                </li>
+                            </ul>
+                        </form>
+                    </li>
+                    <li class="msg-ballon message-my">
+                        <div class="txt-module">
+                            <p class="desc-black">배가 아파요 (복통)</p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:37</span></div>
+                        </div>
+                    </li>
+                    <li class="msg-ballon">
+                        <div class="txt-module">
+                            <p class="desc-black">
+                                <b>복통</b>이 어느 부위에 있는지, 자세하게 알려줄 수 있어? 아래 이미지에서 부위를 선택해줘. 🙂
+                            </p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:35</span></div>
+                        </div>
+                        <form action="">
+                        <ul class="select-module opt-board bg-abdomen">
+                            <li>
+                                <input type="checkbox" id="abdomen1" name="abdomen1" />
+                                <label for="abdomen1">오른쪽 위</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="abdomen2" name="abdomen2" />
+                                <label for="abdomen2">위쪽</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="abdomen3" name="abdomen3" />
+                                <label for="abdomen3">왼쪽 위</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="abdomen4" name="abdomen4" />
+                                <label for="abdomen4">오른쪽</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="abdomen5" name="abdomen5" />
+                                <label for="abdomen5">배꼽쪽</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="abdomen6" name="abdomen6" />
+                                <label for="abdomen6">왼쪽</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="abdomen7" name="abdomen7" />
+                                <label for="abdomen7">오른쪽 아래</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="abdomen8" name="abdomen8" />
+                                <label for="abdomen8">아래쪽</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="abdomen9" name="abdomen9" />
+                                <label for="abdomen9">왼쪽 아래</label>
+                            </li>
+                        </ul>
+                        <input type="submit" value="선택완료"  class="btn-ending">
+                    </form>
+                    </li>
+                    <li class="msg-ballon message-my">
+                        <div class="txt-module">
+                            <p class="desc-black">소변 색이 변했어요. (소변)</p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:37</span></div>
+                        </div>
+                    </li>
+                    <li class="msg-ballon">
+                        <div class="txt-module">
+                            <p class="desc-black">
+                                <b>소변</b>의 상태가 어떤지, 자세하게 알려줄 수 있어? 아래 이미지에서 상태를 선택해줘. 🙂
+                            </p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:35</span></div>
+                        </div>
+                        <form action="">
+                            <ul class="select-module opt-board">
+                                <li>
+                                    <input type="radio" name="urine" id="urine1">
+                                    <label for="urine1">거품뇨</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="urine" id="urine2">
+                                    <label for="urine2">혈뇨</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="urine" id="urine3">
+                                    <label for="urine3">갈색뇨</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="urine" id="urine4">
+                                    <label for="urine4">악취가 <br> 나는 소변</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="urine" id="urine5">
+                                    <label for="urine5">부옇고 <br> 탁한 소변</label>
+                                </li>
+                            </ul>
+                            <input type="submit" value="선택완료"  class="btn-ending">
+                        </form>
+                    </li>
+                    <li class="msg-ballon message-my">
+                        <div class="txt-module">
+                            <p class="desc-black">화상을 입었어요.</p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:37</span></div>
+                        </div>
+                    </li>
+                    <li class="msg-ballon">
+                        <div class="txt-module">
+                            <p class="desc-black">
+                                <b>외상</b>을 입은 부위가 어디인지, 자세하게 알려줄 수 있어? 아래 이미지를 참고하여 부위를 선택해줘. 🙂
+                            </p>
+                            <div class="time-" aria-label="메시지 작성시간"><em>오후</em> <span>12:35</span></div>
+                        </div>
+                        <form action="">
+                        <ul class="select-module bg-body">
+                            <li class="right- face-right">
+                                <input type="checkbox" id="body1" name="body1" />
+                                <label for="body1">오른쪽 얼굴</label>
+                            </li>
+                            <li class="left- face-left">
+                                <input type="checkbox" id="body2" name="body2" />
+                                <label for="body2">왼쪽 얼굴</label>
+                            </li>
+                            <li class="right- body-right">
+                                <input type="checkbox" id="body3" name="body3" />
+                                <label for="body3">오른쪽 몸</label>
+                            </li>
+                            <li class="left- body-left">
+                                <input type="checkbox" id="body4" name="body4" />
+                                <label for="body4">왼쪽 몸</label>
+                            </li>
+                            <li class="right- arm-right">
+                                <input type="checkbox" id="body5" name="body5" />
+                                <label for="body5">오른팔</label>
+                            </li>
+                            <li class="left- arm-left">
+                                <input type="checkbox" id="body6" name="body6" />
+                                <label for="body6">왼팔</label>
+                            </li>
+                            <li class="right- hand-right">
+                                <input type="checkbox" id="body7" name="body7" />
+                                <label for="body7">오른손</label>
+                            </li>
+                            <li class="left- hand-left">
+                                <input type="checkbox" id="body8" name="body8" />
+                                <label for="body8">왼손</label>
+                            </li>
+                            <li class="right- leg-right">
+                                <input type="checkbox" id="body9" name="body9" />
+                                <label for="body9">오른다리</label>
+                            </li>
+                            <li class="left- leg-left">
+                                <input type="checkbox" id="body10" name="body10" />
+                                <label for="body10">왼다리</label>
+                            </li>
+                            <li class="right- foot-right">
+                                <input type="checkbox" id="body11" name="body11" />
+                                <label for="body11">오른발</label>
+                            </li>
+                            <li class="left- foot-left">
+                                <input type="checkbox" id="body12" name="body12" />
+                                <label for="body12">왼발</label>
+                            </li>
+                        </ul>
+                        <input type="submit" value="선택완료"  class="btn-ending">
+                        </form>
+                    </li>
+                </ul>
+            </section>
+            <div class="loading-image hide"><img src="./images/contents/loading.gif" alt="" /></div>
+            <footer class="chat-write">
+                <h3 class="blind">대화창 입력영역</h3>
+                <!-- textarea 2줄 이상일 경우 .on 추가 -->
+                <div class="chat-write-area">
+                    <h4 class="blind">메시지 입력 영역</h4>
+                    <div class="input-btn-wrap">
+                        <button class="btn-func">
+                            <i class="las la-plus-circle"></i>
+                        </button>
+                        <!-- <label id="imageUploadButton" class="btn-photo" for="imageUploader" role="button">
+                            <i class="las la-plus-circle"></i>
+                            <span class="blind">이미지 추가</span>
+                        </label>
+                        <form id="imageUploader" method="post" enctype="multipart/form-data" style="height: 0px; position: fixed">
+                            <input name="files" type="file" accept="image/*" multiple="" title="파일선택" style="visibility: hidden" />
+                        </form> -->
+                        <!-- <a href="tel:02-000-0000" class="btn-phone" type="button" aria-label="전화하기">
+                            <i class="las la-phone"></i>
+                            <span class="blind">전화하기</span>
+                        </a> -->
+                    </div>
+                    <div class="chat-input-area">
+                        <textarea title="메시지 입력창" class="chat-input" maxlength="2000" placeholder="메시지를 입력하세요."></textarea>
+                    </div>
+                    <div class="submit-btn-wrap">
+                        <button class="btn-submit" type="submit" aria-label="메시지 보내기">
+                            <i class="lab la-telegram"></i>
+                            <span class="blind">메시지 보내기</span>
+                        </button>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+        </div>
+    </body>
+</html>
