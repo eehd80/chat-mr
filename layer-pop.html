@@ -123,15 +123,58 @@
         </div>
 
         <div class="layer-wrap">
-            <div class="layer-">
+            <div class="layer- layer-review">
                 <h2 class="blind">리뷰</h2>
                 <div class="rating-area">
-                    <div class="rating-txt">
+                    <p class="rating-txt">
                         잠깐만요! <br />
-                        종료하기 전에 <b>소중한 의견</b>을 들려주세요~</div>
-                    </div>
-                    <div class="rating rating-0"><em class="blind">평점 5</em></div>
+                        종료하기 전에 <b>소중한 의견</b>을 들려주세요~
+                    </p>
+                    <form action="">
+                        <!-- 별점 -->
+                        <div class="starpoint-wrap">
+                            <div class="starpoint-box">
+                            <input type="radio" name="starpoint" id="starpoint1" class="star-radio">
+                            <label for="starpoint1" class="label-star" title="1"><span class="startpoint-txt">너무 별로에요 최악!</span></label>
+                            <input type="radio" name="starpoint" id="starpoint2" class="star-radio">
+                            <label for="starpoint2" class="label-star" title="2"><span class="startpoint-txt">불만있어요.</span></label>
+                            <input type="radio" name="starpoint" id="starpoint3" class="star-radio">
+                            <label for="starpoint3" class="label-star" title="3"><span class="startpoint-txt">보통이에요~</span></label>
+                            <input type="radio" name="starpoint" id="starpoint4" class="star-radio">
+                            <label for="starpoint4" class="label-star" title="4"><span class="startpoint-txt">만족해요!</span></label>
+                            <input type="radio" name="starpoint" id="starpoint5" class="star-radio">
+                            <label for="starpoint5" class="label-star" title="5"><span class="startpoint-txt">매우 만족해요 최고!</span></label>
+                            <span class="starpoint-bg"></span>
+                            </div>
+                        </div>
+                        <!-- //별점 -->
+                        </div>
+
+                        <!-- 의견한마디 -->
+                        <div class="write-box-area">
+                            <h2 class="write-tit">의견 한마디</h2>
+                            <textarea name="" id="" cols="30" rows="10" class="write-textarea" placeholder="서비스에 대한 솔직한 의견을 남겨주세요."></textarea>
+                            <div class="write-count">
+                                <span class="blind">현재 입력한 글자수</span>
+                                <strong class="count-num">74</strong>
+                                /
+                                <span class="blind">전체 입력 가능한 글자수</span>
+                                <span class="count-total">100</span>
+                            </div>
+
+                        </div>
+                        <!-- //의견한마디 -->
+
+                        <!-- 닫기 -->
+                        <div class="layer-btn">
+                            <input type="reset" class="btn-reset" value="다음에 할게요">
+                            <input type="submit" class="btn-upload" value="의견 보내기">
+                        </div>
+
+                    </form>
+
                 </div>
+            
             </div>
     </body>
 </html>

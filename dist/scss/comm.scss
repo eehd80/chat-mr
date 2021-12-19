@@ -1,6 +1,16 @@
 @charset "UTF-8";
 @import "reset", "variables", "mixin";
 
+// comm
+.loading {
+    display: block;
+    width: 200px;
+    height: 20px;
+    background: url(../../images/contents/loading-circles.gif) 0 50% / auto 250% no-repeat;
+    font-size: 0;
+    filter: grayscale(100%);
+}
+
 // layout
 .wrap {
     padding: 55px 2% 70px;
@@ -217,6 +227,7 @@
             display: flex;
             align-items: center;
             padding-right: 40px;
+            text-align: left;
             &::before {
                 content: "\f058";
                 @include posY;
@@ -260,6 +271,20 @@
             }
         }
     }
+    &.opt-txt-img {
+        label {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // padding-bottom: 10px;
+            font-size: 0.9em;
+        }
+        .img-urine {
+            display: block;
+            width: 60%;
+            margin-bottom: 5px;
+        }
+    }
     &.opt-columns {
         flex-direction: column;
     }
@@ -279,10 +304,45 @@
             background-color: rgba($prim1, 0.2);
         }
     }
+    &.bg-body-type1 {
+        position: relative;
+        width: 100%;
+        height: 340px;
+        border-radius: 10px;
+        background: rgba($b, 0.05);
+        &::after {
+            content: "";
+            @include posX;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: $w;
+        }
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            margin: 0;
+            img {
+                width: 80%;
+            }
+        }
+        label {
+            flex-direction: column;
+            height: 100%;
+            span {
+                display: block;
+                height: 30px;
+                margin: 20px 0 10px;
+                text-align: center;
+            }
+        }
+    }
     &.bg-body {
         position: relative;
         height: 450px;
-        border-radius: 20px;
+        border-radius: 10px;
         background: rgba($b, 0.05) url(../../images/contents/img-body.svg) 50% 50% / auto 90% no-repeat;
         &::after {
             content: "";
@@ -362,9 +422,9 @@
                 transform: translateX(60px);
                 label::after {
                     content: "";
-                    width: 37px;
-                    height: 123px;
-                    transform: translate(-112px, 32px);
+                    width: 38px;
+                    height: 124px;
+                    transform: translate(-110px, 32px);
                     background-image: url(../../images/contents/body-left.svg);
                 }
             }
@@ -428,9 +488,9 @@
                 transform: translateX(60px);
                 label::after {
                     content: "";
-                    width: 47px;
-                    height: 206px;
-                    transform: translate(-99px, -33px);
+                    width: 48px;
+                    height: 207px;
+                    transform: translate(-98px, -33px);
                     background-image: url(../../images/contents/leg-left.svg);
                 }
             }
@@ -544,6 +604,13 @@
             // background-color: $prim1;
             border-radius: 3px;
             font-size: 0.9em;
+            letter-spacing: -0.1em;
+            i {
+                display: inline-block;
+                margin: -3px 5px 0 0;
+                vertical-align: middle;
+                font-size: 1.5em;
+            }
         }
     }
     + .time- {
@@ -552,24 +619,40 @@
 }
 
 // btn
-.btn-ending {
-    display: block;
-    height: 40px;
-    margin: 20px auto 0;
-    padding: 0 30px;
-    border-radius: 40px !important;
-    background-color: $w;
-    border: 1px solid $prim1;
-    color: $prim3;
-    &::before {
-        content: "\f00c";
-        display: none;
-        margin: -3px 5px 0;
-        vertical-align: middle;
-        font-family: "Line Awesome Free";
-        font-weight: 900;
-        font-size: 0.8em;
-        color: $prim1;
+.btn-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    .btn- {
+        display: block;
+        height: 40px;
+        margin: 0 10px;
+        padding: 0 15px;
+        border-radius: 40px !important;
+        background-color: $w;
+        border: 1px solid $prim1;
+        color: $prim3;
+        &::before {
+            content: "\f00c";
+            display: none;
+            margin: -3px 5px 0;
+            vertical-align: middle;
+            font-family: "Line Awesome Free";
+            font-weight: 900;
+            font-size: 0.8em;
+            color: $prim1;
+        }
+        i {
+            display: inline-block;
+            margin-right: 1px;
+        }
+        &.btn-gray {
+            border: 1px solid $gray-a;
+            color: $gray-a;
+            &::before {
+                content: "xx";
+            }
+        }
     }
 }
 
@@ -593,28 +676,33 @@
 
 // 평점
 .rating {
-    display: inline-block;
-    width: 70px;
-    height: 20px;
-    margin-right: 10px;
-    vertical-align: middle;
-    background-position: 0 50%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    &.rating-5 {
-        background-image: url(../../images/contents/rating-5.svg);
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 17px !important;
+    margin-right: 20px;
+    background: url(../../images/contents/rating-bg.svg) 0 50% / auto 100% no-repeat;
+    em {
+        display: block;
+        overflow: hidden;
+        height: 100%;
+        background: url(../../images/contents/rating-img.svg) 0 50% / auto 100% no-repeat;
+        text-indent: -9999px;
     }
-    &.rating-4 {
-        background-image: url(../../images/contents/rating-4.svg);
+    .rating-5 {
+        width: 100%;
     }
-    &.rating-3 {
-        background-image: url(../../images/contents/rating-3.svg);
+    .rating-4 {
+        width: 78%;
     }
-    &.rating-2 {
-        background-image: url(../../images/contents/rating-2.svg);
+    .rating-3 {
+        width: 58%;
     }
-    &.rating-1 {
-        background-image: url(../../images/contents/rating-1.svg);
+    .rating-2 {
+        width: 38%;
+    }
+    .rating-1 {
+        width: 18%;
     }
 }
 
@@ -673,8 +761,7 @@
 }
 
 .layer-wrap {
-    // display: none;
-    display: block;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -682,10 +769,11 @@
     bottom: 0;
     z-index: 1000;
     background-color: rgba($b, 0.5);
+
     .layer- {
         @include posXY;
         width: 90%;
-        padding: 20px;
+        padding: 30px 20px 70px;
         background-color: $w;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
     }
@@ -700,6 +788,148 @@
         margin: 20px auto;
         transform: scale(2);
         // transform-origin: 0 0;
+    }
+
+    .layer-btn {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        margin-top: 23px;
+        input {
+            display: block;
+            width: 50%;
+            height: 40px;
+            border: none;
+        }
+        .btn-reset {
+            background: #f1f1f1;
+            color: #707070;
+        }
+        .btn-upload {
+            background: $prim3;
+            color: $w;
+        }
+    }
+}
+
+// layer-별점
+.starpoint-wrap {
+    display: block;
+    width: 100%;
+    padding: 30px 0 70px;
+}
+
+.starpoint-box {
+    position: relative;
+    width: 230px;
+    height: 40px;
+    margin: auto;
+    background: url(../../images/contents/rating-bg.svg) 0 0 / auto 100% no-repeat;
+
+    .starpoint-bg {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: url(../../images/contents/rating-img.svg) 0 0 / auto 100% no-repeat;
+        pointer-events: none;
+    }
+
+    .startpoint-txt {
+        display: none;
+        @include posX;
+        bottom: -40px;
+    }
+    .label-star {
+        display: inline-block;
+        width: 19%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .star-radio {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        position: absolute;
+
+        &:checked + label .startpoint-txt {
+            display: block;
+        }
+
+        &:nth-of-type(1) {
+            &:checked {
+                & ~ .starpoint-bg {
+                    width: 20%;
+                }
+            }
+        }
+
+        &:nth-of-type(2) {
+            &:checked ~ .starpoint-bg {
+                width: 40%;
+            }
+        }
+
+        &:nth-of-type(3) {
+            &:checked ~ .starpoint-bg {
+                width: 60%;
+            }
+        }
+
+        &:nth-of-type(4) {
+            &:checked ~ .starpoint-bg {
+                width: 80%;
+            }
+        }
+
+        &:nth-of-type(5) {
+            &:checked ~ .starpoint-bg {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// 의견한마디
+.write-box-area {
+    position: relative;
+    .write-tit {
+        font-size: 1em;
+        font-weight: normal;
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin: -5px 4px 0 0;
+            background: url(../../images/contents/ico-bubble.svg) 0 0 no-repeat;
+            vertical-align: middle;
+        }
+    }
+    .write-textarea {
+        display: block;
+        width: 100%;
+        height: 90px;
+        margin-top: 5px;
+        padding: 10px;
+        border: 1px solid rgba($b, 0.3);
+        resize: none;
+    }
+    .write-count {
+        position: absolute;
+        top: 5px;
+        right: 0;
+        color: #707070;
+        font-size: 0.8em;
+        font-family: "verdana", serif;
+    }
+    .count-num {
+        font-weight: normal;
+        color: $prim3;
     }
 }
 

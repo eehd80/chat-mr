@@ -1,27 +1,16 @@
 $(function () {
-    // $(".select-module").each(function () {
-    //     let $this = $(this),
-    //         $boxModule = $this.find("li"),
-    //         $boxLink = $this.find("a");
+    $("#inquiry1").click(function () {
+        $(".layer-review").show();
+    });
 
-    //     $boxModule.removeClass("on");
+    $(".btn-reset").click(function (event) {
+        event.preventDefault();
+        $(this).parents(".layer-wrap").hide();
+    });
 
-    //     $boxModule.click(function () {
-    //         // event.preventDefault();
-
-    //         let $this = $(this);
-
-    //         if ($this.hasClass("on") === true) {
-    //             $this.removeClass("on");
-    //         } else {
-    //             $this.addClass("on");
-    //         }
-
-    //         // if ($boxModule.hasClass("on") === false) {
-    //         //     $boxModule.addClass("on");
-    //         // } else {
-    //         //     $this.removeClass("on");
-    //         // }
-    //     });
-    // });
+    $(".layer-review .btn-upload").click(function (event) {
+        event.preventDefault();
+        $(".layer-review").hide();
+        $(".layer-txt").show();
+    });
 });
