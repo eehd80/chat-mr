@@ -4,8 +4,8 @@
 // comm
 .loading {
     display: block;
-    width: 200px;
-    height: 20px;
+    width: 30px;
+    height: 10px;
     background: url(../../images/contents/loading-circles.gif) 0 50% / auto 250% no-repeat;
     font-size: 0;
     filter: grayscale(100%);
@@ -141,6 +141,12 @@
     }
 }
 
+@media screen and (min-width: 480px) {
+    .group-msg-balloon .txt-module .desc-black {
+        max-width: 450px;
+    }
+}
+
 .date-check {
     display: flex;
     margin-top: 30px;
@@ -162,6 +168,7 @@
 .select-module {
     display: flex;
     flex-wrap: wrap;
+    max-width: 450px;
     margin-top: 10px;
     li {
         margin: 5px 5px 0 0;
@@ -189,15 +196,16 @@
         padding: 0 15px 0 10px;
         border: 1px solid rgba($prim1, 0.3);
         border-radius: 5px;
-        background-color: rgba($prim1, 0.1);
+        background-color: rgba($prim1, 0.2);
         box-sizing: border-box;
         text-align: center;
+        cursor: pointer;
     }
     input:checked + label {
         border: 1px solid rgba($prim1, 0.7);
-        background-color: rgba($prim1, 0.4);
+        background-color: rgba($prim1, 0.8);
         &::before {
-            color: rgba($b, 0.5);
+            color: $prim3;
         }
     }
     a,
@@ -301,7 +309,7 @@
             background: url(../../images/contents/img-abdomen.svg) 49.9% 50% / cover no-repeat;
         }
         label {
-            background-color: rgba($prim1, 0.2);
+            background-color: rgba($prim1, 0.3);
         }
     }
     &.bg-body-type1 {
@@ -331,6 +339,7 @@
         label {
             flex-direction: column;
             height: 100%;
+            background-color: rgba($prim1, 0.3);
             span {
                 display: block;
                 height: 30px;
@@ -389,9 +398,9 @@
                 transform: translateX(-30px);
                 label::after {
                     content: "";
-                    width: 27px;
-                    height: 52px;
-                    transform: translate(32px, 4px);
+                    width: 28px;
+                    height: 51px;
+                    transform: translate(32px, 3px);
                     background-image: url(../../images/contents/face-right.svg);
                 }
             }
@@ -400,9 +409,9 @@
                 transform: translateX(30px);
                 label::after {
                     content: "";
-                    width: 27px;
-                    height: 52px;
-                    transform: translate(-103px, 4px);
+                    width: 28px;
+                    height: 51px;
+                    transform: translate(-104px, 3px);
                     background-image: url(../../images/contents/face-left.svg);
                 }
             }
@@ -412,8 +421,8 @@
                 label::after {
                     content: "";
                     width: 35px;
-                    height: 122px;
-                    transform: translate(60px, 31px);
+                    height: 121px;
+                    transform: translate(60px, 33px);
                     background-image: url(../../images/contents/body-right.svg);
                 }
             }
@@ -423,8 +432,8 @@
                 label::after {
                     content: "";
                     width: 38px;
-                    height: 124px;
-                    transform: translate(-110px, 32px);
+                    height: 121px;
+                    transform: translate(-110px, 33px);
                     background-image: url(../../images/contents/body-left.svg);
                 }
             }
@@ -488,9 +497,9 @@
                 transform: translateX(60px);
                 label::after {
                     content: "";
-                    width: 48px;
-                    height: 207px;
-                    transform: translate(-98px, -33px);
+                    width: 50px;
+                    height: 208px;
+                    transform: translate(-96px, -33px);
                     background-image: url(../../images/contents/leg-left.svg);
                 }
             }
@@ -518,7 +527,155 @@
             }
         }
     }
+    &.bg-face {
+        position: relative;
+        overflow: hidden;
+        height: 300px;
+        padding: 20px;
+        border-radius: 10px;
+        background: rgba($b, 0.05) url(../../images/contents/img-face.svg) 50% 50% / auto 100% no-repeat;
+        &::before {
+            content: "";
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba($b, 0.5);
+        }
+        li {
+            position: absolute;
+            margin: 0;
+            &:nth-child(-n + 4) {
+                left: 50%;
+                transform: translateX(-165px);
+            }
+            &:nth-child(n + 5) {
+                right: 50%;
+                transform: translateX(165px);
+            }
+        }
+        label {
+            justify-content: center;
+            width: 60px;
+            height: 40px;
+            padding: 0;
+            &::before {
+                display: none;
+                position: absolute;
+                opacity: 0.6;
+                transform: scale(0.93);
+            }
+        }
+        input:checked + label::before {
+            display: block;
+        }
+        .face-eye {
+            top: 30px;
+            label::before {
+                content: "";
+                top: 37px;
+                left: 82px;
+                width: 165px;
+                height: 37px;
+                background: url(../../images/contents/face-eye.svg) 0 0 no-repeat;
+                border-radius: 10px;
+            }
+        }
+        .face-nose {
+            top: 80px;
+            label::before {
+                content: "";
+                top: -13px;
+                left: 139px;
+                width: 51px;
+                height: 93px;
+                background: url(../../images/contents/face-nose.svg) 0 0 no-repeat;
+                border-radius: 10px;
+            }
+        }
+        .face-mouth {
+            top: 130px;
+            label::before {
+                content: "";
+                top: 36px;
+                left: 128px;
+                width: 75px;
+                height: 45px;
+                background: url(../../images/contents/face-mouth.svg) 0 0 no-repeat;
+                border-radius: 10px;
+            }
+        }
+        .face-ear {
+            top: 180px;
+            label::before {
+                content: "";
+                top: -112px;
+                left: 37px;
+                width: 256px;
+                height: 95px;
+                background: url(../../images/contents/face-ear.svg) 0 0 no-repeat;
+            }
+        }
+        .face-eyebrows {
+            top: 30px;
+            label::before {
+                content: "";
+                top: 17px;
+                right: 75px;
+                width: 178px;
+                height: 26px;
+                background: url(../../images/contents/face-eyebrows.svg) 0 0 no-repeat;
+            }
+        }
+        .face-eyelid {
+            top: 80px;
+            label::before {
+                content: "";
+                top: -9px;
+                right: 81px;
+                width: 167px;
+                height: 22px;
+                background: url(../../images/contents/face-eyelid.svg) 0 0 no-repeat;
+            }
+        }
+        .face-eyelashes {
+            top: 130px;
+            label::before {
+                content: "";
+                top: -53px;
+                right: 83px;
+                width: 165px;
+                height: 18px;
+                background: url(../../images/contents/face-eyelashes.svg) 0 0 no-repeat;
+            }
+        }
+        .face-white {
+            top: 180px;
+            label::before {
+                content: "";
+                top: -99px;
+                right: 87px;
+                width: 155px;
+                height: 16px;
+                background: url(../../images/contents/face-white.svg) 0 0 no-repeat;
+            }
+        }
+        .face-black {
+            top: 230px;
+            label::before {
+                content: "";
+                top: -150px;
+                right: 103px;
+                width: 126px;
+                height: 17px;
+                background: url(../../images/contents/face-black.svg) 0 0 no-repeat;
+            }
+        }
+    }
 }
+
 .recom-module {
     position: relative;
     padding: 15px 15px 0;
@@ -567,6 +724,7 @@
         li {
             flex-shrink: 0;
             width: 70%;
+            max-width: 240px;
             margin-right: 2%;
             padding: 15px;
             border: 1px solid rgba($prim1, 0.3);
@@ -598,10 +756,10 @@
         }
         .link-m {
             display: inline-block;
-            margin-top: 10px;
-            padding: 3px 7px;
+            margin-top: 15px;
+            padding: 7px 12px;
             border: 1px solid rgba($b, 0.2);
-            // background-color: $prim1;
+            background-color: $prim1;
             border-radius: 3px;
             font-size: 0.9em;
             letter-spacing: -0.1em;
@@ -622,6 +780,7 @@
 .btn-area {
     display: flex;
     justify-content: center;
+    max-width: 450px;
     margin-top: 20px;
     .btn- {
         display: block;
@@ -642,6 +801,10 @@
             font-size: 0.8em;
             color: $prim1;
         }
+        &:hover {
+            border: 1px solid $prim4;
+            color: $prim4;
+        }
         i {
             display: inline-block;
             margin-right: 1px;
@@ -649,8 +812,9 @@
         &.btn-gray {
             border: 1px solid $gray-a;
             color: $gray-a;
-            &::before {
-                content: "xx";
+            &:hover {
+                border: 1px solid #777;
+                color: #777;
             }
         }
     }
@@ -715,9 +879,12 @@
     padding: 0 5px;
     border-top: 1px solid #e4e4e4;
     background-color: #fafafa;
+
     .chat-write-area {
         display: flex;
         align-items: center;
+        position: relative;
+        z-index: 10;
         &.on {
             .chat-input-area {
                 height: 70px;
@@ -755,8 +922,88 @@
             resize: none;
         }
     }
-    .input-btn-wrap {
+    .chat-btn-wrap {
         display: flex;
+        &:active,
+        &:hover,
+        &:visited {
+            background-color: transparent;
+        }
+        &.active {
+            .btn-func {
+                transform: rotate(135deg);
+                &::after {
+                    color: $w;
+                }
+                &::before {
+                    background-color: $prim1;
+                    border: 1px solid rgba($b, 0.1);
+                }
+            }
+            .float-go {
+                display: flex;
+            }
+        }
+        .btn-func {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            transition: all 0.5s;
+            background-color: transparent;
+            font-size: 0;
+            &::after {
+                content: "+";
+                position: absolute;
+                top: 11px;
+                left: 20px;
+                font-size: 18px;
+                // font-weight: bold;
+                color: $gray-9;
+            }
+            &::before {
+                content: "";
+                @include posXY;
+                width: 23px;
+                height: 23px;
+                border: 2px solid $gray-9;
+                box-sizing: border-box;
+                border-radius: 50%;
+            }
+            &:active,
+            &:hover,
+            &:visited {
+                background-color: transparent;
+            }
+        }
+        .float-go {
+            display: none;
+            @include posX;
+            bottom: 70px;
+            z-index: 1;
+            transition: all 0.5s ease-in-out;
+            > button {
+                display: inline-block;
+                height: 35px;
+                margin: 0 10px;
+                padding: 0 20px 0;
+                border: 1px solid rgba($b, 0.1);
+                border-radius: 35px;
+                background-color: $prim2;
+                color: $w;
+                white-space: nowrap;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05), 0 5px 5px 0 rgba(0, 0, 0, 0.05);
+                &:hover {
+                    background-color: $prim4;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 480px) {
+    .chat-write .chat-btn-wrap .float-go {
+        position: absolute;
+        left: 50px;
+        transform: none;
     }
 }
 
