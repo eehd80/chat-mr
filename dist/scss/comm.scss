@@ -377,10 +377,10 @@
                 display: block;
             }
             &.right- {
-                right: 50%;
+                left: 50%;
             }
             &.left- {
-                left: 50%;
+                right: 50%;
             }
             label {
                 &::after {
@@ -395,7 +395,7 @@
 
             &.face-right {
                 top: 27px;
-                transform: translateX(-30px);
+                transform: translateX(-144px);
                 label::after {
                     content: "";
                     width: 28px;
@@ -406,7 +406,7 @@
             }
             &.face-left {
                 top: 27px;
-                transform: translateX(30px);
+                transform: translateX(132px);
                 label::after {
                     content: "";
                     width: 28px;
@@ -416,8 +416,8 @@
                 }
             }
             &.body-right {
-                top: 87px;
-                transform: translateX(-60px);
+                top: 86px;
+                transform: translateX(-160px);
                 label::after {
                     content: "";
                     width: 35px;
@@ -428,7 +428,7 @@
             }
             &.body-left {
                 top: 87px;
-                transform: translateX(60px);
+                transform: translateX(148px);
                 label::after {
                     content: "";
                     width: 38px;
@@ -439,7 +439,7 @@
             }
             &.arm-right {
                 top: 147px;
-                transform: translateX(-80px);
+                transform: translateX(-164px);
                 label::after {
                     content: "";
                     width: 43px;
@@ -450,7 +450,7 @@
             }
             &.arm-left {
                 top: 147px;
-                transform: translateX(80px);
+                transform: translateX(153px);
                 label::after {
                     content: "";
                     width: 48px;
@@ -461,7 +461,7 @@
             }
             &.hand-right {
                 top: 207px;
-                transform: translateX(-90px);
+                transform: translateX(-175px);
                 label::after {
                     content: "";
                     width: 69px;
@@ -472,7 +472,7 @@
             }
             &.hand-left {
                 top: 207px;
-                transform: translateX(90px);
+                transform: translateX(163px);
                 label::after {
                     content: "";
                     width: 67px;
@@ -483,7 +483,7 @@
             }
             &.leg-right {
                 top: 307px;
-                transform: translateX(-60px);
+                transform: translateX(-158px);
                 label::after {
                     content: "";
                     width: 50px;
@@ -494,18 +494,18 @@
             }
             &.leg-left {
                 top: 307px;
-                transform: translateX(60px);
+                transform: translateX(145px);
                 label::after {
                     content: "";
                     width: 50px;
-                    height: 208px;
+                    height: 206px;
                     transform: translate(-96px, -33px);
                     background-image: url(../../images/contents/leg-left.svg);
                 }
             }
             &.foot-right {
                 top: 387px;
-                transform: translateX(-40px);
+                transform: translateX(-125px);
                 label::after {
                     content: "";
                     width: 50px;
@@ -516,7 +516,7 @@
             }
             &.foot-left {
                 top: 387px;
-                transform: translateX(40px);
+                transform: translateX(113px);
                 label::after {
                     content: "";
                     width: 48px;
@@ -531,22 +531,12 @@
         position: relative;
         overflow: hidden;
         height: 300px;
-        padding: 20px;
         border-radius: 10px;
         background: rgba($b, 0.05) url(../../images/contents/img-face.svg) 50% 50% / auto 100% no-repeat;
-        &::before {
-            content: "";
-            display: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba($b, 0.5);
-        }
         li {
             position: absolute;
             margin: 0;
+            transform: translateY(-10px);
             &:nth-child(-n + 4) {
                 left: 50%;
                 transform: translateX(-165px);
@@ -672,6 +662,44 @@
                 height: 17px;
                 background: url(../../images/contents/face-black.svg) 0 0 no-repeat;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .select-module.bg-face {
+        li:nth-child(-n + 4) {
+            transform: translateX(-205px);
+        }
+        li:nth-child(n + 5) {
+            transform: translateX(205px);
+        }
+        .face-eye label::before {
+            left: 122px;
+        }
+        .face-nose label::before {
+            left: 179px;
+        }
+        .face-mouth label::before {
+            left: 168px;
+        }
+        .face-ear label::before {
+            left: 77px;
+        }
+        .face-eyebrows label::before {
+            right: 115px;
+        }
+        .face-eyelid label::before {
+            right: 121px;
+        }
+        .face-eyelashes label::before {
+            right: 123px;
+        }
+        .face-white label::before {
+            right: 127px;
+        }
+        .face-black label::before {
+            right: 143px;
         }
     }
 }
@@ -999,13 +1027,6 @@
         }
     }
 }
-@media screen and (min-width: 480px) {
-    .chat-write .chat-btn-wrap .float-go {
-        position: absolute;
-        left: 50px;
-        transform: none;
-    }
-}
 
 .layer-wrap {
     display: none;
@@ -1020,6 +1041,7 @@
     .layer- {
         @include posXY;
         width: 90%;
+        max-width: 450px;
         padding: 30px 20px 70px;
         background-color: $w;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
@@ -1088,7 +1110,8 @@
     .startpoint-txt {
         display: none;
         @include posX;
-        bottom: -40px;
+        bottom: -50px;
+        white-space: nowrap;
     }
     .label-star {
         display: inline-block;
