@@ -389,7 +389,6 @@
                     background-position: 0 0;
                     background-size: contain;
                     background-repeat: no-repeat;
-                    transform: scale(1.03);
                 }
             }
 
@@ -398,10 +397,10 @@
                 transform: translateX(-144px);
                 label::after {
                     content: "";
-                    top: -7px;
-                    right: -31px;
-                    width: 28px;
-                    height: 51px;
+                    top: -8px;
+                    right: -32px;
+                    width: 29px;
+                    height: 52px;
                     background-image: url(../../images/contents/face-right.svg);
                 }
             }
@@ -410,10 +409,10 @@
                 transform: translateX(132px);
                 label::after {
                     content: "";
-                    top: -7px;
-                    left: -30px;
-                    width: 28px;
-                    height: 51px;
+                    top: -8px;
+                    left: -31px;
+                    width: 29px;
+                    height: 52px;
                     background-image: url(../../images/contents/face-left.svg);
                 }
             }
@@ -422,10 +421,10 @@
                 transform: translateX(-160px);
                 label::after {
                     content: "";
-                    top: -9px;
-                    right: -58px;
-                    width: 35px;
-                    height: 121px;
+                    top: -11px;
+                    right: -60px;
+                    width: 36px;
+                    height: 122px;
                     background-image: url(../../images/contents/body-right.svg);
                 }
             }
@@ -434,10 +433,10 @@
                 transform: translateX(148px);
                 label::after {
                     content: "";
-                    top: -10px;
-                    left: -58px;
-                    width: 38px;
-                    height: 121px;
+                    top: -11px;
+                    left: -59px;
+                    width: 39px;
+                    height: 122px;
                     background-image: url(../../images/contents/body-left.svg);
                 }
             }
@@ -446,10 +445,10 @@
                 transform: translateX(-164px);
                 label::after {
                     content: "";
-                    top: -67px;
-                    right: -45px;
-                    width: 43px;
-                    height: 122px;
+                    top: -68px;
+                    right: -46px;
+                    width: 45px;
+                    height: 125px;
                     background-image: url(../../images/contents/arm-right.svg);
                 }
             }
@@ -458,10 +457,10 @@
                 transform: translateX(153px);
                 label::after {
                     content: "";
-                    top: -65px;
-                    left: -47px;
-                    width: 48px;
-                    height: 122px;
+                    top: -66px;
+                    left: -48px;
+                    width: 51px;
+                    height: 125px;
                     background-image: url(../../images/contents/arm-left.svg);
                 }
             }
@@ -471,9 +470,9 @@
                 label::after {
                     content: "";
                     top: -24px;
-                    right: -43px;
-                    width: 69px;
-                    height: 69px;
+                    right: -44px;
+                    width: 70px;
+                    height: 70px;
                     background-image: url(../../images/contents/hand-right.svg);
                 }
             }
@@ -482,10 +481,10 @@
                 transform: translateX(163px);
                 label::after {
                     content: "";
-                    top: -24px;
-                    left: -43px;
-                    width: 67px;
-                    height: 67px;
+                    top: -25px;
+                    left: -45px;
+                    width: 70px;
+                    height: 70px;
                     background-image: url(../../images/contents/hand-left.svg);
                 }
             }
@@ -495,9 +494,9 @@
                 label::after {
                     content: "";
                     top: -118px;
-                    right: -62px;
-                    width: 50px;
-                    height: 206px;
+                    right: -63px;
+                    width: 52px;
+                    height: 208px;
                     background-image: url(../../images/contents/leg-right.svg);
                 }
             }
@@ -507,9 +506,9 @@
                 label::after {
                     content: "";
                     top: -118px;
-                    left: -59px;
-                    width: 50px;
-                    height: 206px;
+                    left: -61px;
+                    width: 52px;
+                    height: 208px;
                     background-image: url(../../images/contents/leg-left.svg);
                 }
             }
@@ -519,9 +518,9 @@
                 label::after {
                     content: "";
                     top: 6px;
-                    right: -40px;
-                    width: 50px;
-                    height: 39px;
+                    right: -41px;
+                    width: 51px;
+                    height: 40px;
                     background-image: url(../../images/contents/foot-right.svg);
                 }
             }
@@ -531,9 +530,9 @@
                 label::after {
                     content: "";
                     top: 6px;
-                    left: -40px;
-                    width: 48px;
-                    height: 40px;
+                    left: -41px;
+                    width: 49px;
+                    height: 41px;
                     background-image: url(../../images/contents/foot-left.svg);
                 }
             }
