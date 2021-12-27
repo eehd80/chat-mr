@@ -384,9 +384,8 @@
             }
             label {
                 &::after {
-                    display: none;
+                    // display: none;
                     position: absolute;
-                    right: 0;
                     background-position: 0 0;
                     background-size: contain;
                     background-repeat: no-repeat;
@@ -398,9 +397,10 @@
                 transform: translateX(-144px);
                 label::after {
                     content: "";
+                    top: -5px;
+                    right: -31px;
                     width: 28px;
                     height: 51px;
-                    transform: translate(32px, 3px);
                     background-image: url(../../images/contents/face-right.svg);
                 }
             }
@@ -409,9 +409,10 @@
                 transform: translateX(132px);
                 label::after {
                     content: "";
+                    top: -5px;
+                    left: -31px;
                     width: 28px;
                     height: 51px;
-                    transform: translate(-104px, 3px);
                     background-image: url(../../images/contents/face-left.svg);
                 }
             }
@@ -747,6 +748,7 @@
 .explan-module {
     overflow-x: auto;
     margin: 20px -16px 0;
+    padding-bottom: 10px;
     .explan-lst {
         display: flex;
         li {

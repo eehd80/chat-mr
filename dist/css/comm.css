@@ -775,9 +775,7 @@ legend {
 }
 
 .select-module.bg-body li label::after {
-  display: none;
   position: absolute;
-  right: 0;
   background-position: 0 0;
   background-size: contain;
   background-repeat: no-repeat;
@@ -791,10 +789,10 @@ legend {
 
 .select-module.bg-body li.face-right label::after {
   content: "";
+  top: -5px;
+  right: -31px;
   width: 28px;
   height: 51px;
-  -webkit-transform: translate(32px, 3px);
-          transform: translate(32px, 3px);
   background-image: url(../../images/contents/face-right.svg);
 }
 
@@ -806,10 +804,10 @@ legend {
 
 .select-module.bg-body li.face-left label::after {
   content: "";
+  top: -5px;
+  left: -31px;
   width: 28px;
   height: 51px;
-  -webkit-transform: translate(-104px, 3px);
-          transform: translate(-104px, 3px);
   background-image: url(../../images/contents/face-left.svg);
 }
 
@@ -1223,6 +1221,7 @@ legend {
 .explan-module {
   overflow-x: auto;
   margin: 20px -16px 0;
+  padding-bottom: 10px;
 }
 
 .explan-module .explan-lst {
