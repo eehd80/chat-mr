@@ -389,7 +389,7 @@
                     background-position: 0 0;
                     background-size: contain;
                     background-repeat: no-repeat;
-                    transform: scale(1.01);
+                    transform: scale(1.03);
                 }
             }
 
@@ -423,7 +423,7 @@
                 label::after {
                     content: "";
                     top: -9px;
-                    right: -60px;
+                    right: -58px;
                     width: 35px;
                     height: 121px;
                     background-image: url(../../images/contents/body-right.svg);
@@ -447,7 +447,7 @@
                 label::after {
                     content: "";
                     top: -67px;
-                    right: -46px;
+                    right: -45px;
                     width: 43px;
                     height: 122px;
                     background-image: url(../../images/contents/arm-right.svg);
@@ -459,7 +459,7 @@
                 label::after {
                     content: "";
                     top: -65px;
-                    left: -48px;
+                    left: -47px;
                     width: 48px;
                     height: 122px;
                     background-image: url(../../images/contents/arm-left.svg);
@@ -471,7 +471,7 @@
                 label::after {
                     content: "";
                     top: -24px;
-                    right: -44px;
+                    right: -43px;
                     width: 69px;
                     height: 69px;
                     background-image: url(../../images/contents/hand-right.svg);
@@ -483,7 +483,7 @@
                 label::after {
                     content: "";
                     top: -24px;
-                    left: -44px;
+                    left: -43px;
                     width: 67px;
                     height: 67px;
                     background-image: url(../../images/contents/hand-left.svg);
@@ -507,7 +507,7 @@
                 label::after {
                     content: "";
                     top: -118px;
-                    left: -60px;
+                    left: -59px;
                     width: 50px;
                     height: 206px;
                     background-image: url(../../images/contents/leg-left.svg);
@@ -519,7 +519,7 @@
                 label::after {
                     content: "";
                     top: 6px;
-                    right: -41px;
+                    right: -40px;
                     width: 50px;
                     height: 39px;
                     background-image: url(../../images/contents/foot-right.svg);
@@ -531,7 +531,7 @@
                 label::after {
                     content: "";
                     top: 6px;
-                    left: -41px;
+                    left: -40px;
                     width: 48px;
                     height: 40px;
                     background-image: url(../../images/contents/foot-left.svg);
