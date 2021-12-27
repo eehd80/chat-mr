@@ -805,7 +805,7 @@ legend {
 .select-module.bg-body li.face-left label::after {
   content: "";
   top: -5px;
-  left: -31px;
+  left: -30px;
   width: 28px;
   height: 51px;
   background-image: url(../../images/contents/face-left.svg);
@@ -819,10 +819,10 @@ legend {
 
 .select-module.bg-body li.body-right label::after {
   content: "";
+  top: -9px;
+  right: -60px;
   width: 35px;
   height: 121px;
-  -webkit-transform: translate(60px, 33px);
-          transform: translate(60px, 33px);
   background-image: url(../../images/contents/body-right.svg);
 }
 
@@ -834,10 +834,10 @@ legend {
 
 .select-module.bg-body li.body-left label::after {
   content: "";
+  top: -9px;
+  left: -58px;
   width: 38px;
   height: 121px;
-  -webkit-transform: translate(-110px, 33px);
-          transform: translate(-110px, 33px);
   background-image: url(../../images/contents/body-left.svg);
 }
 
@@ -849,10 +849,10 @@ legend {
 
 .select-module.bg-body li.arm-right label::after {
   content: "";
+  top: -67px;
+  right: -46px;
   width: 43px;
   height: 122px;
-  -webkit-transform: translate(46px, -24px);
-          transform: translate(46px, -24px);
   background-image: url(../../images/contents/arm-right.svg);
 }
 
@@ -864,10 +864,10 @@ legend {
 
 .select-module.bg-body li.arm-left label::after {
   content: "";
+  top: -65px;
+  left: -48px;
   width: 48px;
   height: 122px;
-  -webkit-transform: translate(-73px, -23px);
-          transform: translate(-73px, -23px);
   background-image: url(../../images/contents/arm-left.svg);
 }
 
@@ -879,10 +879,10 @@ legend {
 
 .select-module.bg-body li.hand-right label::after {
   content: "";
+  top: -24px;
+  right: -44px;
   width: 69px;
   height: 69px;
-  -webkit-transform: translate(44px, -7px);
-          transform: translate(44px, -7px);
   background-image: url(../../images/contents/hand-right.svg);
 }
 
@@ -894,10 +894,10 @@ legend {
 
 .select-module.bg-body li.hand-left label::after {
   content: "";
+  top: -24px;
+  left: -44px;
   width: 67px;
   height: 67px;
-  -webkit-transform: translate(-51px, -9px);
-          transform: translate(-51px, -9px);
   background-image: url(../../images/contents/hand-left.svg);
 }
 
@@ -909,10 +909,10 @@ legend {
 
 .select-module.bg-body li.leg-right label::after {
   content: "";
+  top: -118px;
+  right: -62px;
   width: 50px;
   height: 206px;
-  -webkit-transform: translate(62px, -33px);
-          transform: translate(62px, -33px);
   background-image: url(../../images/contents/leg-right.svg);
 }
 
@@ -924,10 +924,10 @@ legend {
 
 .select-module.bg-body li.leg-left label::after {
   content: "";
+  top: -118px;
+  left: -60px;
   width: 50px;
   height: 206px;
-  -webkit-transform: translate(-96px, -33px);
-          transform: translate(-96px, -33px);
   background-image: url(../../images/contents/leg-left.svg);
 }
 
@@ -939,10 +939,10 @@ legend {
 
 .select-module.bg-body li.foot-right label::after {
   content: "";
+  top: 6px;
+  right: -41px;
   width: 50px;
   height: 39px;
-  -webkit-transform: translate(41px, 7px);
-          transform: translate(41px, 7px);
   background-image: url(../../images/contents/foot-right.svg);
 }
 
@@ -954,10 +954,10 @@ legend {
 
 .select-module.bg-body li.foot-left label::after {
   content: "";
+  top: 6px;
+  left: -41px;
   width: 48px;
   height: 40px;
-  -webkit-transform: translate(-66px, 7px);
-          transform: translate(-66px, 7px);
   background-image: url(../../images/contents/foot-left.svg);
 }
 
