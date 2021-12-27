@@ -779,6 +779,8 @@ legend {
   background-position: 0 0;
   background-size: contain;
   background-repeat: no-repeat;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 .select-module.bg-body li.face-right {
@@ -789,7 +791,7 @@ legend {
 
 .select-module.bg-body li.face-right label::after {
   content: "";
-  top: -5px;
+  top: -7px;
   right: -31px;
   width: 28px;
   height: 51px;
@@ -804,7 +806,7 @@ legend {
 
 .select-module.bg-body li.face-left label::after {
   content: "";
-  top: -5px;
+  top: -7px;
   left: -30px;
   width: 28px;
   height: 51px;
@@ -834,7 +836,7 @@ legend {
 
 .select-module.bg-body li.body-left label::after {
   content: "";
-  top: -9px;
+  top: -10px;
   left: -58px;
   width: 38px;
   height: 121px;
