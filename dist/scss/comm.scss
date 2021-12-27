@@ -361,12 +361,17 @@
             width: 3px;
             background-color: $w;
         }
-        input:checked + label::after {
-            display: block;
+        input:checked + label {
+            background-color: rgba($prim1, 0.5);
+            &::before {
+                display: block;
+            }
         }
         label {
+            width: 100px;
             height: 35px;
             padding: 0 13px;
+            justify-content: center;
         }
         li {
             position: absolute;
@@ -378,12 +383,14 @@
             }
             &.right- {
                 left: 50%;
+                transform: translateX(-170px);
             }
             &.left- {
                 right: 50%;
+                transform: translateX(170px);
             }
             label {
-                &::after {
+                &::before {
                     display: none;
                     position: absolute;
                     background-position: 0 0;
@@ -394,35 +401,32 @@
 
             &.face-right {
                 top: 27px;
-                transform: translateX(-144px);
-                label::after {
+                label::before {
                     content: "";
-                    top: -8px;
-                    right: -31px;
+                    top: -6px;
+                    right: -53px;
                     width: 29px;
-                    height: 52px;
+                    height: 47px;
                     background-image: url(../../images/contents/face-right.svg);
                 }
             }
             &.face-left {
                 top: 27px;
-                transform: translateX(132px);
-                label::after {
+                label::before {
                     content: "";
-                    top: -8px;
-                    left: -30px;
+                    top: -6px;
+                    left: -49px;
                     width: 29px;
-                    height: 52px;
+                    height: 47px;
                     background-image: url(../../images/contents/face-left.svg);
                 }
             }
             &.body-right {
                 top: 86px;
-                transform: translateX(-160px);
-                label::after {
+                label::before {
                     content: "";
-                    top: -11px;
-                    right: -59px;
+                    top: -10px;
+                    right: -51px;
                     width: 36px;
                     height: 122px;
                     background-image: url(../../images/contents/body-right.svg);
@@ -430,11 +434,10 @@
             }
             &.body-left {
                 top: 87px;
-                transform: translateX(148px);
-                label::after {
+                label::before {
                     content: "";
                     top: -11px;
-                    left: -58px;
+                    left: -50px;
                     width: 39px;
                     height: 122px;
                     background-image: url(../../images/contents/body-left.svg);
@@ -442,35 +445,32 @@
             }
             &.arm-right {
                 top: 147px;
-                transform: translateX(-164px);
-                label::after {
+                label::before {
                     content: "";
-                    top: -68px;
-                    right: -45px;
+                    top: -67px;
+                    right: -19px;
                     width: 45px;
-                    height: 125px;
+                    height: 120px;
                     background-image: url(../../images/contents/arm-right.svg);
                 }
             }
             &.arm-left {
                 top: 147px;
-                transform: translateX(153px);
-                label::after {
+                label::before {
                     content: "";
-                    top: -66px;
-                    left: -47px;
+                    top: -67px;
+                    left: -18px;
                     width: 51px;
-                    height: 125px;
+                    height: 119px;
                     background-image: url(../../images/contents/arm-left.svg);
                 }
             }
             &.hand-right {
                 top: 207px;
-                transform: translateX(-175px);
-                label::after {
+                label::before {
                     content: "";
                     top: -24px;
-                    right: -44px;
+                    right: -4px;
                     width: 70px;
                     height: 70px;
                     background-image: url(../../images/contents/hand-right.svg);
@@ -478,11 +478,10 @@
             }
             &.hand-left {
                 top: 207px;
-                transform: translateX(163px);
-                label::after {
+                label::before {
                     content: "";
                     top: -25px;
-                    left: -45px;
+                    left: -5px;
                     width: 70px;
                     height: 70px;
                     background-image: url(../../images/contents/hand-left.svg);
@@ -490,11 +489,10 @@
             }
             &.leg-right {
                 top: 307px;
-                transform: translateX(-158px);
-                label::after {
+                label::before {
                     content: "";
                     top: -118px;
-                    right: -61px;
+                    right: -51px;
                     width: 50px;
                     height: 208px;
                     background-image: url(../../images/contents/leg-right.svg);
@@ -502,11 +500,10 @@
             }
             &.leg-left {
                 top: 307px;
-                transform: translateX(145px);
-                label::after {
+                label::before {
                     content: "";
                     top: -118px;
-                    left: -60px;
+                    left: -50px;
                     width: 46px;
                     height: 209px;
                     background-image: url(../../images/contents/leg-left.svg);
@@ -514,11 +511,10 @@
             }
             &.foot-right {
                 top: 387px;
-                transform: translateX(-125px);
-                label::after {
+                label::before {
                     content: "";
-                    top: 6px;
-                    right: -41px;
+                    top: 5px;
+                    right: -51px;
                     width: 51px;
                     height: 40px;
                     background-image: url(../../images/contents/foot-right.svg);
@@ -526,11 +522,10 @@
             }
             &.foot-left {
                 top: 387px;
-                transform: translateX(113px);
-                label::after {
+                label::before {
                     content: "";
-                    top: 6px;
-                    left: -41px;
+                    top: 5px;
+                    left: -51px;
                     width: 49px;
                     height: 41px;
                     background-image: url(../../images/contents/foot-left.svg);
@@ -679,11 +674,47 @@
 
 @media screen and (min-width: 480px) {
     .select-module.bg-body li {
-        &.hand-right label::after {
-            right: -43px;
+        &.right- {
+            transform: translateX(-210px);
         }
-        &.leg-left label::after {
-            left: -59px;
+        &.left- {
+            transform: translateX(210px);
+        }
+        &.face-right label::before {
+            right: -93px;
+        }
+        &.face-left label::before {
+            left: -89px;
+        }
+        &.body-right label::before {
+            right: -90px;
+        }
+        &.body-left label::before {
+            left: -90px;
+        }
+        &.arm-right label::before {
+            right: -58px;
+        }
+        &.arm-left label::before {
+            left: -58px;
+        }
+        &.hand-right label::before {
+            right: -44px;
+        }
+        &.hand-left label::before {
+            left: -45px;
+        }
+        &.leg-right label::before {
+            right: -91px;
+        }
+        &.leg-left label::before {
+            left: -90px;
+        }
+        &.foot-right label::before {
+            right: -91px;
+        }
+        &.foot-left label::before {
+            left: -91px;
         }
     }
     .select-module.bg-face {
