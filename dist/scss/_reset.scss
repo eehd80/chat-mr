@@ -134,11 +134,11 @@ input,
 select,
 textarea,
 button {
-    font-size: calc(14px + 0.1vw);
+    font-size: 14px;
     line-height: 1.5;
     font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
     color: #111;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.05px;
 }
 
 /* color값은 디자인가이드에 맞게사용 */

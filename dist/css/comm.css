@@ -124,11 +124,11 @@ input,
 select,
 textarea,
 button {
-  font-size: calc(14px + 0.1vw);
+  font-size: 14px;
   line-height: 1.5;
   font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
   color: #111;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.05px;
 }
 
 /* color값은 디자인가이드에 맞게사용 */
@@ -755,12 +755,14 @@ legend {
 }
 
 .select-module.bg-body label {
-  width: 100px;
+  width: 70px;
   height: 35px;
-  padding: 0 13px;
+  padding: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 0.9em;
+  letter-spacing: -1px;
 }
 
 .select-module.bg-body li {
@@ -801,7 +803,7 @@ legend {
 .select-module.bg-body li.face-right label::before {
   content: "";
   top: -6px;
-  right: -53px;
+  right: -84px;
   width: 29px;
   height: 47px;
   background-image: url(../../images/contents/face-right.svg);
@@ -814,7 +816,7 @@ legend {
 .select-module.bg-body li.face-left label::before {
   content: "";
   top: -6px;
-  left: -49px;
+  left: -80px;
   width: 29px;
   height: 47px;
   background-image: url(../../images/contents/face-left.svg);
@@ -827,7 +829,7 @@ legend {
 .select-module.bg-body li.body-right label::before {
   content: "";
   top: -10px;
-  right: -51px;
+  right: -82px;
   width: 36px;
   height: 122px;
   background-image: url(../../images/contents/body-right.svg);
@@ -840,7 +842,7 @@ legend {
 .select-module.bg-body li.body-left label::before {
   content: "";
   top: -11px;
-  left: -50px;
+  left: -81px;
   width: 39px;
   height: 122px;
   background-image: url(../../images/contents/body-left.svg);
@@ -853,7 +855,7 @@ legend {
 .select-module.bg-body li.arm-right label::before {
   content: "";
   top: -67px;
-  right: -19px;
+  right: -49px;
   width: 45px;
   height: 120px;
   background-image: url(../../images/contents/arm-right.svg);
@@ -866,7 +868,7 @@ legend {
 .select-module.bg-body li.arm-left label::before {
   content: "";
   top: -67px;
-  left: -18px;
+  left: -48px;
   width: 51px;
   height: 119px;
   background-image: url(../../images/contents/arm-left.svg);
@@ -879,7 +881,7 @@ legend {
 .select-module.bg-body li.hand-right label::before {
   content: "";
   top: -24px;
-  right: -4px;
+  right: -35px;
   width: 70px;
   height: 70px;
   background-image: url(../../images/contents/hand-right.svg);
@@ -892,7 +894,7 @@ legend {
 .select-module.bg-body li.hand-left label::before {
   content: "";
   top: -25px;
-  left: -5px;
+  left: -36px;
   width: 70px;
   height: 70px;
   background-image: url(../../images/contents/hand-left.svg);
@@ -905,7 +907,7 @@ legend {
 .select-module.bg-body li.leg-right label::before {
   content: "";
   top: -118px;
-  right: -51px;
+  right: -82px;
   width: 50px;
   height: 208px;
   background-image: url(../../images/contents/leg-right.svg);
@@ -918,7 +920,7 @@ legend {
 .select-module.bg-body li.leg-left label::before {
   content: "";
   top: -118px;
-  left: -50px;
+  left: -81px;
   width: 46px;
   height: 209px;
   background-image: url(../../images/contents/leg-left.svg);
@@ -931,7 +933,7 @@ legend {
 .select-module.bg-body li.foot-right label::before {
   content: "";
   top: 5px;
-  right: -51px;
+  right: -82px;
   width: 51px;
   height: 40px;
   background-image: url(../../images/contents/foot-right.svg);
@@ -944,7 +946,7 @@ legend {
 .select-module.bg-body li.foot-left label::before {
   content: "";
   top: 5px;
-  left: -51px;
+  left: -82px;
   width: 49px;
   height: 41px;
   background-image: url(../../images/contents/foot-left.svg);
@@ -1128,40 +1130,40 @@ legend {
             transform: translateX(210px);
   }
   .select-module.bg-body li.face-right label::before {
-    right: -93px;
+    right: -123px;
   }
   .select-module.bg-body li.face-left label::before {
-    left: -89px;
+    left: -119px;
   }
   .select-module.bg-body li.body-right label::before {
-    right: -90px;
+    right: -120px;
   }
   .select-module.bg-body li.body-left label::before {
-    left: -90px;
+    left: -120px;
   }
   .select-module.bg-body li.arm-right label::before {
-    right: -58px;
+    right: -88px;
   }
   .select-module.bg-body li.arm-left label::before {
-    left: -58px;
+    left: -88px;
   }
   .select-module.bg-body li.hand-right label::before {
-    right: -44px;
+    right: -74px;
   }
   .select-module.bg-body li.hand-left label::before {
-    left: -45px;
+    left: -75px;
   }
   .select-module.bg-body li.leg-right label::before {
-    right: -91px;
+    right: -121px;
   }
   .select-module.bg-body li.leg-left label::before {
-    left: -90px;
+    left: -120px;
   }
   .select-module.bg-body li.foot-right label::before {
-    right: -91px;
+    right: -121px;
   }
   .select-module.bg-body li.foot-left label::before {
-    left: -91px;
+    left: -121px;
   }
   .select-module.bg-face li:nth-child(-n + 4) {
     -webkit-transform: translateX(-205px);
